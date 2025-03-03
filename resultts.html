@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Results</title>
+    <link rel="stylesheet" href="results.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Your Results</h1>
+        <nav>
+            <a href="index.html" class="home-button">Home</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <section class="results-form container">
+            <form action="#" class="animate-form">
+                <!-- Test Summary -->
+                <fieldset class="test-summary">
+                    <legend style="font-size: 30px; font-weight: bold;"> Test Summary</legend>
+                    <label for="test-result" style="font-size: 20px; font-weight: 600px;">Result:</label>
+                    <input style="color: grey;" type="text" id="test-result" value="You did not fall for the phishing attempt!" readonly>
+
+                    <label for="time-taken" style="font-size: 20px; font-weight: 600px;">Time Taken:</label>
+                    <input style="color: grey;" type="text" id="time-taken" value="3 minutes 25 seconds" readonly>
+
+                    <label for="link-clicked" style="font-size: 20px; font-weight: 600px;">Phishing Link Clicked:</label>
+                    <input style="color: grey;" type="text" id="link-clicked" value="No" readonly>
+
+                    <label for="missed-elements" style="font-size: 20px; font-weight: 600px;">Phishing Elements Missed:</label>
+                    <input style="color: grey;" type="text" id="missed-elements" value="2" readonly>
+                </fieldset>
+
+             
+            </form>
+        </section>
+
+        <!-- Recommendations Card -->
+        <section class="recommendations-card container mt-5">
+            <div class="card">
+                <div class="card-header" style="background-color: #003366; color: white; font-weight: bold;">
+                    <h3>Recommendations for Improvement</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Always check the sender's email address before clicking on links or downloading attachments.</li>
+                        <li class="list-group-item">Look out for urgent language or requests for personal information.</li>
+                        <li class="list-group-item">Verify links by hovering over them before clicking to check for suspicious URLs.</li>
+                        <li class="list-group-item">Use two-factor authentication (2FA) wherever possible to add an extra layer of security.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="button-container">
+                <a href="analysis.html" class="button">Detailed Analysis</a>
+            </div>
+        </section>
+     
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Cyber Resilience. All rights reserved.</p>
+    </footer>
+</body>
+</html>

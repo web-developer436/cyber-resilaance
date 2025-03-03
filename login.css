@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white; /* Dark Blue Background */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    position: relative;
+    width: 450px;
+    padding: 60px;
+    background: #003366;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 40px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: white;
+    font-size: 12px;
+}
+
+.login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transition: 0.5s;
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    background: none;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.login-box form a:hover {
+    background: white;
+    color: #0d1b3d;
+}
+
+/* Signup Link Inline with Text */
+.signup-link {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.signup-link p {
+    color: #fff;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .login-box {
+        width: 90%;
+        padding: 40px;
+    }
+
+    .login-box .user-box input {
+        font-size: 16px;
+    }
+}
+
+/* Footer Section */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}

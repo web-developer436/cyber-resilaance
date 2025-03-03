@@ -1,0 +1,296 @@
+* {
+  margin-top: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Styling for the image */
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Dark overlay for dimming */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark dim effect */
+  z-index: 1;
+}
+
+/* Top left "Cyber Resilience" heading */
+.top-left-text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #4771da;
+  font-size: 30px;
+  font-weight: bold;
+  z-index: 3; /* On top of the overlay */
+}
+
+/* Top right "Login" button */
+.login-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 3; /* On top of the overlay */
+}
+
+.login-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Main content in the center */
+.content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  margin-top:10px; /* Moves the content 200px down */
+  max-width: 1000px; /* Paragraph width limit */
+  padding: 0 20px;
+  animation: fadeIn 2s ease;
+}
+
+.main-heading {
+  font-size: 48px; /* Larger font for heading */
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: slideIn 2s ease;
+}
+
+p {
+  font-size: 22px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.start-btn {
+  background-color: #164db2;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.start-btn:hover {
+  background-color: #2b5fe2;
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .start-btn {
+    font-size: 20px;
+    padding: 15px 30px;
+  }
+  .login-btn {
+      padding: 8px 16px;
+      font-size: 16px;
+      top: 15px;
+      right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .start-btn {
+    font-size: 18px;
+    padding: 12px 25px;
+  }
+  .login-btn {
+      padding: 6px 12px;
+      font-size: 14px;
+      top: 10px;
+      right: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* cyber */
+/* General Body and Layout Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Header Styling */
+.cyber-header {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 50px;
+  margin-top: 100px;
+  
+}
+
+.cyber-title {
+  font-size: 3em;
+  color: white; /* Dark Blue color for the title */
+  animation: fadeInRight 2s forwards;
+
+}
+
+/* Cybersecurity Cards Section Styling */
+.cybersecurity-cards {
+  padding: 40px 20px;
+}
+
+/* Card Container - Initial Hidden State for Animation */
+.card-container {
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeInRight 1s forwards;
+
+}
+
+/* Card Styling */
+.cyber-card {
+  background-color: #ffffff;
+  height: 200px;
+  width: 550px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin: 0 auto; /* Center the cards */
+  border: 2px solid transparent; /* Default transparent border */
+}
+
+/* Card Title Styling */
+.cyber-card-title {
+  font-size: 1.8em;
+  color: darkblue;
+  margin-bottom: 15px;
+}
+
+/* Card Body Styling */
+.cyber-card-body {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* Hover Effect for Cards */
+.cyber-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px 4px rgba(0, 0, 255, 0.5); /* Blue shadow on hover */
+  border-color: blue; /* Blue border on hover */
+}
+
+/* WOW.js Animation for Cards */
+@keyframes fadeInRight {
+  0% {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Media Queries for Mobile and Tablet */
+@media (max-width: 768px) {
+  .cyber-title {
+      font-size: 2em;
+  }
+
+  .cyber-card {
+      width: 100%; /* Make cards full width on smaller screens */
+      height: auto; /* Adjust height accordingly */
+  }
+
+  .cyber-card-title {
+      font-size: 1.5em;
+  }
+
+  .cyber-card-body {
+      font-size: 1em;
+  }
+}
+
+/* Footer Section */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+}
